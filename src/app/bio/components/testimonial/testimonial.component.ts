@@ -9,7 +9,8 @@ import { Ripple, initTE } from 'tw-elements';
   styleUrl: './testimonial.component.css',
 })
 export class TestimonialComponent {
-
-
+constructor(){
+  initTE({ Ripple });
+}
 
 }
