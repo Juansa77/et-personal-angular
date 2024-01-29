@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Book } from '../../shared/interfaces/book.interface';
 
 @Component({
   selector: 'app-book-card-left',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './book-card-left.component.css'
 })
 export class BookCardLeftComponent {
+
+  @Input() book!:Book | undefined
+
+
 
 }
