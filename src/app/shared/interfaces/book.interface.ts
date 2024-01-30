@@ -9,4 +9,9 @@ export interface Book {
   plot: string;
   innerLink?: string;
   tecInfo?: string;
+  curiosities: Curiosity
+}
+
+interface Curiosity {
+  [key: string]: string;
 }

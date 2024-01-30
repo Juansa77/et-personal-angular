@@ -24,6 +24,7 @@ export class BooksComponent {
   }
 
   constructor() {
+
     console.log(this.booksService.booksCollection);
   }
 }

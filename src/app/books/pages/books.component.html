@@ -1,4 +1,5 @@
 <app-books-banner ></app-books-banner>
 <app-book-card-left [book]="this.booksService.booksCollection[0]"></app-book-card-left>
-<app-book-curiosities></app-book-curiosities>
+<app-book-curiosities [book]="this.booksService.booksCollection[0]" ></app-book-curiosities>
 <app-book-card-left [book]="this.booksService.booksCollection[1]"></app-book-card-left>
+<app-book-curiosities [book]="this.booksService.booksCollection[1]" ></app-book-curiosities>

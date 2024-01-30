@@ -9,6 +9,7 @@ export class BooksServiceService {
   private http = inject(HttpClient);
 
   private jsonUrl: string = 'assets/data/booksData.json';
+
   public booksCollection: Book[] = [];
   constructor() {
     this.getBooks();
