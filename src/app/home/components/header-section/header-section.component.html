@@ -1,4 +1,6 @@
-<section class="relative py-20  bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800 overflow-hidden">
+<section
+  class="min-h-full max-h-full relative py-20 bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800 overflow-hidden"
+>
   <div class="relative">
     <img
       class="absolute bottom-00 right-0"
@@ -9,12 +11,16 @@
       <div class="container px-4 mx-auto pt-24 pb-20">
         <div class="max-w-sm sm:max-w-md lg:max-w-xl">
           <h1
-            class="animate-bounce text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-heading text-white font-semibold mb-8"
+            class="animate-bounce max-h-min text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-heading text-white font-semibold mb-0"
           >
-           Hola, me llamo Elena Tejedor y soy <h1 class="heading">{{textToShow}}</h1>
+            Hola, me llamo Elena Tejedor y soy
           </h1>
+          <div
+            class="min-h-12 max-h-12 mt-0  text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading text-white font-semibold mb-8"
+            >{{ textToShow }}</div
+          >
           <p
-            class="max-w-sm lg:max-w-md mb-8 text-blue-300 text-sm lg:text-base"
+            class="max-w-sm lg:max-w-md mb-8 text-blue-300 text-sm lg:text-base mb-8"
           >
             Build a well-presented brand that everyone will love. Take care to
             develop resources continually and integrity them with previous
@@ -29,9 +35,7 @@
             <a class="flex items-center gap-2 group" href="#">
               <div
                 class="text-white group-hover:text-opacity-80 transition duration-200"
-              >
-
-              </div>
+              ></div>
               <span
                 class="text-sm text-white font-medium group-hover:text-opacity-80 transition duration-200"
                 >Sobre mi</span

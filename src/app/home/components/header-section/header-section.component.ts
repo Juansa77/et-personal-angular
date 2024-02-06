@@ -1,4 +1,5 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnDestroy, OnInit, signal } from '@angular/core';
+import { Subscription, interval } from 'rxjs';
 
 @Component({
   selector: 'app-header-section',
@@ -7,28 +8,21 @@ import { Component, OnInit, signal } from '@angular/core';
   templateUrl: './header-section.component.html',
   styleUrl: './header-section.component.css',
 })
-export class HeaderSectionComponent {
-   textos:string[] = [
-    'escritora',
-    'vegetariana',
-    'cuidadora de gatos',
-    'adicta a la comida'
-   ]
-textToShow:string=""
+export class HeaderSectionComponent implements OnInit, OnDestroy {
+  textos: string[] = ['escritora', 'vegetariana', 'gatofila'];
+  public textToShow: string = '';
+  public index: number = 0;
+  public interval$?: Subscription;
+  constructor() {}
 
-constructor(){
-  this.textChange()
-
-}
-
-
-  textChange() {
-    let index = 0;
-    setInterval(()=>{
-      this.textToShow = this.textos[index];
-      index = (index + 1) % this.textos.length;
-      console.log(this.textToShow)
-    }, 1560)
-
+  ngOnInit(): void {
+    this.interval$ = interval(1500).subscribe(() => {
+      (this.textToShow = this.textos[this.index]),
+        (this.index = (this.index + 1) % this.textos.length);
+      console.log(this.textToShow);
+    });
+  }
+  ngOnDestroy(): void {
+    this.interval$?.unsubscribe();
   }
 }
