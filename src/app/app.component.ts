@@ -10,12 +10,21 @@ import { Tooltip, initTE, Ripple } from 'tw-elements';
   standalone: true,
   imports: [CommonModule, RouterOutlet, NavBarComponent, FooterComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   ngOnInit(): void {
     initTE({ Tooltip, Ripple }, { allowReinits: true });
   }
   title = 'et-web';
 
+  onActivate(event: Event) {
+    // window.scroll(0,0);
+
+    window.scroll({
+      top: 0,
+      left: 0,
+      //behavior: 'smooth',
+    });
+  }
 }
