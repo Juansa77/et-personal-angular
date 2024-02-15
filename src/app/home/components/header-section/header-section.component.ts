@@ -9,7 +9,7 @@ import { Subscription, interval } from 'rxjs';
   styleUrl: './header-section.component.css',
 })
 export class HeaderSectionComponent implements OnInit, OnDestroy {
-  textos: string[] = ['escritora', 'vegetariana', 'gatofila'];
+  textos: string[] = ['escritora', 'vegetariana', 'gatofila', "dramática"];
   public textToShow: string = '';
   public index: number = 0;
   public interval$?: Subscription;
