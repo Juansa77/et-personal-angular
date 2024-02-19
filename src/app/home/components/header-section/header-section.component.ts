@@ -9,8 +9,8 @@ import { Subscription, interval } from 'rxjs';
   styleUrl: './header-section.component.css',
 })
 export class HeaderSectionComponent implements OnInit, OnDestroy {
-  textos: string[] = ['escritora', 'vegetariana', 'gatofila', "dramática"];
-  public textToShow: string = '';
+  textos: string[] = [ 'vegetariana', 'gatofila', "dramática"];
+  public textToShow: string = 'escritora';
   public index: number = 0;
   public interval$?: Subscription;
   constructor() {}
